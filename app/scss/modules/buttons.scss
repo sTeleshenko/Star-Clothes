@@ -1,0 +1,31 @@
+
+.button-transparent{
+  text-transform: uppercase;
+  padding: 8px 20px;
+  height: 30px;
+  margin-right: 13px;
+  border: 1px solid transparent;
+  transition: .3s ease;
+}
+
+.button-black{
+  color: $color-white;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 0;
+  background: $color-black;
+  font-weight: $weight-black;
+  cursor: pointer;
+}
+.button-checkout{
+  @extend .button-black;
+  padding: 7px 15px;
+  font-size: 13px;
+  height: 30px;
+}
+.button-buy{
+  @extend .button-black;
+  width: 100%;
+  height: 50px;
+  transition: .3s ease;
+}

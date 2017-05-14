@@ -1,0 +1,177 @@
+
+.container{
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  @include respond-to(lg){
+    max-width: 1170px;
+  }
+  @include respond-to(md){
+    max-width: 900px;
+  }
+  @include respond-to(sm){
+    max-width: 700px;
+  }
+  @include respond-to(xs){
+    max-width: calc(100% - 20px);
+  }
+}
+.container-fluid{
+  width: 100%;
+  padding:0 30px;
+  @include respond-to(xs){
+    padding: 0 10px;
+  }
+}
+
+.header{
+  padding-bottom: 25px;
+  background: $bg-gradient;
+}
+
+.header-top{
+  background: #252525;
+  color: $color-white;
+  font-weight: $weight-light;
+  font-size: 12px;
+  .header-top-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    .header-top-menu{
+      display: flex;
+      li + li{
+        margin-left: 25px;
+      }
+    }
+    .phone{
+      display: flex;
+      align-items: center;
+      .phone-icon{
+        @include sprite($phone);
+        margin-right: 5px;
+      }
+    }
+    @include respond-to(xs){
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+}
+
+.header-middle{
+  font-weight: $weight-light;
+  color: $color-main-grey;
+  .header-middle-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0 20px 13px;
+    .logo{
+      margin-right: 20px;
+      margin-bottom: 20px;
+    }
+    @include respond-to(xs){
+      flex-direction: column;
+    }
+    .header-middle-content-right{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      font-size: 13px;
+      .account{
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+        @include respond-to(xs){
+          flex-wrap: wrap;
+        }
+        .account-cart{
+          margin: 10px 20px 10px 18px;
+          display: flex;
+          align-items: center;
+          @include respond-to(sm){
+            margin: 0 10px 0 0;
+          }
+          .cart{
+            @include sprite($cart);
+            display: inline-block;
+            margin-right: 7px;
+          }
+        }
+      }
+      .search{
+        width: 100%;
+        position: relative;
+        input{
+          display: block;
+          width: 100%;
+          border: 1px solid #e5e4e2;
+          padding: 10px 40px 10px 15px;
+          height: 40px;
+          background: transparent;
+        }
+        .search-icon{
+          position: absolute;
+          right: 10px;
+          top: 50%;
+          transform: translateY(-50%);
+
+          @include sprite($search);
+          display: inline-block;
+        }
+      }
+    }
+  }
+
+}
+nav{
+  display: flex;
+  justify-content: flex-start;
+  @include respond-to(xs){
+    flex-direction: column;
+  }
+  a{
+    height: 40px;
+    font-size: 16px;
+    background: $color-gray;
+    color: $color-main-grey;
+    text-transform: uppercase;
+    padding: 12px 30px;
+    transition: .3s ease;
+    @include respond-to(sm){
+      padding: 12px 12px;
+      font-size: 12px;
+    }
+    @include respond-to(md){
+      padding: 12px 20px;
+    }
+  }
+}
+
+//Slider
+
+.slider-top{
+  padding: 35px 0;
+}
+
+//Arrivals
+.arrivals{
+  background: $bg-gradient;
+  padding-top: 50px;
+  .arrivals-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: center;
+    .arrivals-content-item{
+      flex-basis: 25%;
+      flex-grow: 0;
+      flex-shrink: 0;
+      position: relative;
+      margin: 8px 0;
+    }
+  }
+}

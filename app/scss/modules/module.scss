@@ -1,0 +1,91 @@
+// TODO: Add modules to a seperate folder
+header{
+  font-weight: $weight-bold;
+  font-size: 37px;
+  color: #1a2631;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-shadow: -3px 5px 4px #dedede;
+  margin-bottom: 33px;
+}
+.arrival-card{
+  padding: 19px 18px ;
+  transition: .3s ease;
+  img{
+    width: 100%;
+    display: block;
+    height: auto;
+  }
+  .card-title{
+    font-weight: $weight-black;
+    font-size: 14px;
+    color: $color-black;
+    line-height: 1.5;
+    display: block;
+    width: 100%;
+    margin-bottom: 3px;
+  }
+  .card-price{
+    font-weight: $weight-regular;
+    font-size: 16px;
+  }
+  .show-on-hover{
+    display: none;
+
+    .size{
+      display: flex;
+      align-items: center;
+      margin-top: 10px;
+      margin-bottom: 20px;
+      font-weight: $weight-regular;
+      font-size: 14px;
+      transition: .3s ease;
+      span{
+        margin-left: 10px;
+        margin-right: 25px;
+      }
+      table{
+        width: 70%;
+        border-collapse: collapse;
+        tr, td{
+          border: 1px solid #e1e1e1;
+          height: 26px;
+        }
+        td{
+          text-align: center;
+          padding-top: 5px;
+        }
+      };
+    }
+  }
+}
+
+//slick
+
+.slick-dots{
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  li{
+    display: inline-block;
+    z-index: 3;
+    & + li{
+      margin-left: 10px;
+    }
+    button{
+      background: #c2c2c2;
+      font-size: 0;
+      width: 20px;
+      height: 20px;
+      border-radius: 100%;
+      border: none;
+      outline: none;
+    }
+    &.slick-active button{
+      background: $color-black;
+    }
+  }
+}

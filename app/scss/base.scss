@@ -1,0 +1,15 @@
+/*-------------------------------------------------
+SMACSS: BASE
+-------------------------------------------------*/
+body {
+  background: $color-gray;
+  color: $color-black;
+  font-family: Roboto;
+  font-weight: $weight-regular;
+}
+
+
+span#test {
+  @include sprite($cart);
+  display: block;
+}
