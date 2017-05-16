@@ -24,9 +24,15 @@ MASTER: IMPORTING STYLESHEETS
 @import "base";
 @import "state";
 @import "modules/buttons";
+@import "modules/header";
+@import "modules/arrivals";
+@import "modules/slider-top";
+@import "modules/product-slider";
+@import "modules/contact-us";
+@import "modules/footer";
 
 
 @import "layout";
 
-@import "modules/module";
+@import "modules/other-modules";
 

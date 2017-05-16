@@ -7,9 +7,3 @@ body {
   font-family: Roboto;
   font-weight: $weight-regular;
 }
-
-
-span#test {
-  @include sprite($cart);
-  display: block;
-}

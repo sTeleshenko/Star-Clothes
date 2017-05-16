@@ -1,0 +1,87 @@
+
+
+header{
+  font-weight: $weight-bold;
+  font-size: 37px;
+  color: #1a2631;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-shadow: -3px 5px 4px #dedede;
+  margin-bottom: 33px;
+}
+
+//brands section
+
+.brands-item{
+  flex-grow: 0;
+  flex-shrink: 0;
+  margin: 33px;
+  img{
+    width: 100%;
+    height: auto;
+  }
+}
+
+
+//News
+
+.news-item{
+  font-weight: $weight-regular;
+  flex-basis: 30%;
+  margin: 12px;
+  @include respond-to(xs){
+    flex-basis: 100%;
+  }
+  img{
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  .news-item-editable{
+    display: inline-block;
+    font-size: 14px;
+    @include respond-to(sm){
+      display: block;
+    }
+    .edit-icon{
+      display: inline-block;
+      margin-right: 5px;
+      @include sprite($edit);
+    }
+  }
+  .news-item-date{
+    @extend .news-item-editable;
+    margin-left: 37px;
+    @include respond-to(sm){
+      margin-left: 0;
+      margin-top: 5px;
+    }
+    .date-icon{
+      display: inline-block;
+      margin-right: 5px;
+      @include sprite($datepicker);
+    }
+  }
+  .news-item-description{
+    font-size: 14px;
+    .description-header{
+      margin-top: 15px;
+      font-weight: $weight-bold;
+      text-transform: uppercase;
+    }
+    p{
+      margin-top: 12px;
+    }
+  }
+  .news-action{
+    button{
+      @extend .button-black;
+      height: 30px;
+      font-size: 13px;
+      margin-top: 25px;
+    }
+  }
+}
+

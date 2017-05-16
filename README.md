@@ -1,32 +1,10 @@
 # test
 
-**Project Setup**
-
-## Installation
-
-*You need to have [NodeJS](http://nodejs.org/)*
-
-*Type below commands in terminal*
-
-```````
-npm install -g yo
-
-npm install -g gulp
-```````
-
-### Install [smacss generator](https://github.com/FuelFrontend/generator-smacss)
-
-*Type below commands in terminal*
-
-```````
-npm install -g generator-smacss
-```````
-
 **Clone the repo & cd into it**
 
 
 ```````
-sudo npm install
+npm install
 
 ```````
 

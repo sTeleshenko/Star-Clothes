@@ -1,9 +1,8 @@
 {
   "name": "test",
   "version": "0.0.1",
-  "description": "Application description goes here",
-  "licenses": "enter your license type here",
-  "repository": "your repository url goes here",
+  "description": "test",
+  "repository": "https://github.com/sTeleshenko/Star-Clothes",
   "devDependencies": {
     "browser-sync": "~1.9.1",
     "gulp": "~3.9.0",
@@ -16,8 +15,5 @@
   },
   "engines": {
     "node": ">=0.10.0"
-  },
-  "dependencies": {
-    "slick-carousel": "^1.6.0"
   }
 }

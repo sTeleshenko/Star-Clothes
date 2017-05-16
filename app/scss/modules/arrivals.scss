@@ -1,18 +1,29 @@
-// TODO: Add modules to a seperate folder
-header{
-  font-weight: $weight-bold;
-  font-size: 37px;
-  color: #1a2631;
-  text-transform: uppercase;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-shadow: -3px 5px 4px #dedede;
-  margin-bottom: 33px;
+
+.arrivals-content-item{
+  flex-basis: 25%;
+  flex-grow: 0;
+  flex-shrink: 0;
+  position: relative;
+  margin: 8px 0;
+  @include respond-to(sm){
+    flex-basis: 50%;
+  }
+  @include respond-to(xs){
+    flex-basis: 100%;
+  }
 }
+
+
+//arrival-card
+
+
 .arrival-card{
-  padding: 19px 18px ;
+  padding: 19px 18px;
   transition: .3s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
   img{
     width: 100%;
     display: block;
@@ -26,10 +37,32 @@ header{
     display: block;
     width: 100%;
     margin-bottom: 3px;
+    margin-top: 5px;
   }
   .card-price{
     font-weight: $weight-regular;
     font-size: 16px;
+  }
+  .old-price{
+    font-weight: $weight-regular;
+    font-size: 14px;
+    color: #b1b1b1;
+    position: relative;
+  }
+  .old-price:after{
+    content: '';
+    position: absolute;
+    border-bottom: 1px solid #b1b1b1;
+    width: 129%;
+    bottom: 7px;
+    left: -3px;
+    transform: rotate(165deg);
+  }
+;
+  .new-price{
+    @extend .card-price;
+    margin-left: 20px;
+    color: $color-hot-price;
   }
   .show-on-hover{
     display: none;
@@ -58,34 +91,6 @@ header{
           padding-top: 5px;
         }
       };
-    }
-  }
-}
-
-//slick
-
-.slick-dots{
-  position: absolute;
-  bottom: 40px;
-  left: 50%;
-  transform: translateX(-50%);
-  li{
-    display: inline-block;
-    z-index: 3;
-    & + li{
-      margin-left: 10px;
-    }
-    button{
-      background: #c2c2c2;
-      font-size: 0;
-      width: 20px;
-      height: 20px;
-      border-radius: 100%;
-      border: none;
-      outline: none;
-    }
-    &.slick-active button{
-      background: $color-black;
     }
   }
 }

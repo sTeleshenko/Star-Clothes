@@ -1,0 +1,171 @@
+
+//footer
+
+.footer-content-wrap{
+  position: relative;
+  display: flex;
+  @include respond-to(md){
+    flex-direction: column;
+  }
+  @include respond-to(sm){
+    flex-direction: column;
+  }
+  @include respond-to(xs){
+    flex-direction: column;
+  }
+  .footer-nav{
+    flex-basis: 60%;
+    display: flex;
+    justify-content: space-between;
+    @include respond-to(md){
+      flex-basis: 100%;
+      justify-content: space-around;
+    }
+    @include respond-to(sm){
+      flex-basis: 100%;
+      justify-content: space-around;
+    }
+    @include respond-to(xs){
+      flex-basis: 100%;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+  }
+}
+
+.footer-nav-header{
+  font-size: 16px;
+  font-weight: $weight-bold;
+  margin-bottom: 48px;
+  text-transform: uppercase;
+}
+
+.footer-nav-list{
+  @include respond-to(xs){
+    margin-right: 30px;
+    margin-bottom: 40px;
+  }
+  li{
+    font-size: 14px;
+    font-weight: $weight-regular;
+    color: #737373;
+    transition: .3s;
+  }
+  li + li{
+    margin-top: 18px;
+  }
+
+}
+
+.stay-connected{
+  margin-left: 13%;
+  @include respond-to(md){
+    margin-left: 0;
+    margin-top: 40px;
+  }
+  @include respond-to(sm){
+    margin-left: 0;
+    margin-top: 40px;
+  }
+  @include respond-to(xs){
+    margin-left: 0;
+    margin-top: 40px;
+  }
+  li{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background: $color-white;
+    border-radius: 100%;
+    position: relative;
+    @include respond-to(xs){
+      width: 35px;
+      height: 35px;
+    }
+    & + li{
+      margin-left: 15px;
+      @include respond-to(xs){
+        margin-left: 10px;
+      }
+    }
+    a{
+      display: inline-block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+  .subscribe{
+    margin-top: 50px;
+    position: relative;
+    input{
+      display: block;
+      width: 100%;
+      height: 39px;
+      border: 1px solid #484848;
+      padding: 0 104px 0 22px;
+      font-size: 12px;
+      background: transparent;
+      color: inherit;
+      outline: none;
+    }
+  }
+}
+.link-to-top{
+  position: absolute;
+  right: 0;
+  top: 0;
+  @include respond-to(md){
+    top: -40px;
+  }
+  @include respond-to(sm){
+    top: -40px;
+  }
+  @include respond-to(xs){
+    top: -40px;
+  }
+  a{
+    width: 44px;
+    height: 39px;
+    position: relative;
+    background: #f3f3f3;
+    display: inline-block;
+    @include respond-to(md){
+      width: 34px;
+      height: 29px;
+    }
+    @include respond-to(sm){
+      width: 34px;
+      height: 29px;
+    }
+    @include respond-to(xs){
+      width: 34px;
+      height: 29px;
+    }
+    .arrow{
+      @include sprite($arrow-top);
+      display: inline-block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+
+a.facebook{
+  @include sprite($facebook);
+}
+a.twitter{
+  @include sprite($twitter);
+}
+a.instagram{
+  @include sprite($instagram);
+}
+a.pinterest{
+  @include sprite($pinterest);
+}
+a.rss{
+  @include sprite($rss);
+}

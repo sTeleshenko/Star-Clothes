@@ -12,8 +12,28 @@ nav a:hover, nav a.active{
   position: absolute;
   background: $color-white;
   box-shadow: 0 0 40px #e3e3e3;
+  @include respond-to(xs){
+    //padding: 19px 18px;
+    width: 100%;
+  }
   .show-on-hover{
     display: block;
   }
 
+}
+
+//form is not valid
+
+
+input.contact-us-form.error::-webkit-input-placeholder {
+  color: $color-red;
+}
+input.error{
+  border: 1px solid $color-red!important;
+}
+
+//footer
+
+.footer-nav-list li:hover{
+  color: $color-white;
 }

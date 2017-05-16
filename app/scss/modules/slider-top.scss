@@ -1,0 +1,236 @@
+
+//slick
+
+.up-to-lines-top{
+  content: '';
+  width: 33px;
+  border-top: 1px solid $color-white;
+  position: absolute;
+  top: 0;
+  @include respond-to(sm){
+    width: 28px;
+  }
+  @include respond-to(xs){
+    width: 12px;
+  }
+}
+.slide{
+  position: relative;
+  .slide-img{
+    display: block;
+    width: 100%;
+  }
+  .slide-content{
+    position: absolute;
+    top: 85px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-transform: uppercase;
+    @include respond-to(sm){
+      top: 30px;
+    }
+    @include respond-to(xs){
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .slide-content-bordered{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      width: 277px;
+      height: 277px;
+      padding: 40px 0;
+      border: 2px solid $color-white;
+      border-radius: 2px;
+      @include respond-to(md){
+        width: 240px;
+        height: 240px;
+        padding: 30px 0;
+      }
+      @include respond-to(sm){
+        width: 200px;
+        height: 200px;
+        padding: 25px;
+      }
+      @include respond-to(xs){
+        width: 100px;
+        height: 100px;
+        padding: 10px;
+      }
+      .border-enclosed{
+        border: 1px solid $color-white;
+        border-radius: 2px;
+        position: absolute;
+        top: 8px;
+        left: 8px;
+        width: 259px;
+        height: 259px;
+        @include respond-to(md){
+          width: 229px;
+          height: 229px;
+          top: 6px;
+          left: 6px;
+        }
+        @include respond-to(sm){
+          width: 188px;
+          height: 188px;
+          top: 5px;
+          left: 5px;
+        }
+        @include respond-to(xs){
+          width: 93px;
+          height: 93px;
+          top: 3px;
+          left: 3px;
+        }
+      }
+      .slider-content-top{
+        font-size: 19px;
+        font-weight: $weight-bold;
+        color: $color-white;
+        @include respond-to(sm){
+          font-size: 13px;
+        }
+        @include respond-to(xs){
+          font-size: 10px;
+        }
+      }
+      .slider-content-title{
+        font-size: 59px;
+        font-weight: $weight-black;
+        color: $color-black;
+        @include respond-to(sm){
+          font-size: 50px;
+        }
+        @include respond-to(xs){
+          font-size: 25px;
+        }
+      }
+      .up-to{
+        @extend .slider-content-top;
+        display: flex;
+        .up-to-text{
+          margin: 0 13px;
+          @include respond-to(sm){
+            margin: 0 5px;
+          }
+          @include respond-to(xs){
+            margin: 0 2px;
+          }
+        }
+        .up-to-lines-left{
+          width: 60px;
+          border-bottom: 1px solid $color-white;
+          position: relative;
+          margin: 5px 0;
+          @include respond-to(sm){
+            width: 40px;
+            margin: 3px;
+          }
+          @include respond-to(xs){
+            width: 14px;
+            margin: 3px;
+          }
+        }
+        .up-to-lines-left:before{
+          @extend .up-to-lines-top;
+          right: 0;
+        }
+        .up-to-lines-right{
+          @extend .up-to-lines-left;
+        }
+        .up-to-lines-right:before{
+          @extend .up-to-lines-top;
+          left: 0;
+        }
+      }
+      .discount{
+        font-weight:$weight-bold;
+        color: $color-black;
+        font-size: 31px;
+        @include respond-to(sm){
+          font-size: 27px;
+        }
+        @include respond-to(xs){
+          font-size: 17px;
+        }
+      }
+    }
+    .slide-action{
+      margin-top: 55px;
+      text-align: center;
+      width: 100%;
+      @include respond-to(sm){
+        margin-top: 32px;
+      }
+      @include respond-to(xs){
+        margin-top: 10%;
+      }
+      button{
+        width: 189px;
+        height: 53px;
+        background: #f09d66;
+        color: $color-white;
+        font-weight: $weight-black;
+        font-size: 24px;
+        text-transform: uppercase;
+        cursor: pointer;
+        border: none;
+        outline: none;
+        @include respond-to(md){
+          width: 179px;
+          height: 42px;
+          font-size: 20px;
+        }
+        @include respond-to(sm){
+          width: 160px;
+          height: 34px;
+          font-size: 17px;
+        }
+        @include respond-to(xs){
+          width: 100%;
+          height: 20px;
+          font-size: 8px;
+        }
+
+      }
+    }
+  }
+}
+
+.slick-dots{
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  @include respond-to(md){
+    bottom: 10px;
+  }
+  @include respond-to(sm){
+    display: none!important;
+  }
+  @include respond-to(xs){
+    display: none!important;
+  }
+  li{
+    display: inline-block;
+    z-index: 3;
+    & + li{
+      margin-left: 10px;
+    }
+    button{
+      background: #c2c2c2;
+      font-size: 0;
+      width: 20px;
+      height: 20px;
+      border-radius: 100%;
+      border: none;
+      outline: none;
+    }
+    &.slick-active button{
+      background: $color-black;
+    }
+  }
+}
+
